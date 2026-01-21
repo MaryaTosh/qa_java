@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AnimalTests {
 
     @Test
-    void GetFamilyTest() {
+    void getFamilyTest() {
         Animal animal = new Animal();
         String actual = animal.getFamily();
         String expected = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";

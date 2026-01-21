@@ -12,17 +12,17 @@ public class AlexTest {
     Feline feline;
 
     @Test
-    void GerKittenTest() throws Exception {
+    void getKittenTest() throws Exception {
         Alex alex = new Alex(feline);
         assertEquals(0, alex.getKittens());
     }
     @Test
-    void GetPlaceOfLivingTest() throws Exception {
+    void getPlaceOfLivingTest() throws Exception {
         Alex alex = new Alex(feline);
         assertEquals("Нью-Йоркский зоопарк", alex.getPlaceOfLiving());
     }
     @Test
-    void GetFriendsTest() throws Exception {
+    void getFriendsTest() throws Exception {
         Alex alex = new Alex(feline);
         assertEquals(List.of("Глория", "Мелман", "Марти"), alex.getFriends());
     }
