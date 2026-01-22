@@ -1,4 +1,3 @@
-import com.example.Animal;
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(MockitoExtension.class)
-public class parametrizedTestsLion {
+public class ParametrizedTestsLion {
     @Mock
     Feline feline;
 
@@ -27,14 +26,14 @@ public class parametrizedTestsLion {
     }
     @ParameterizedTest
     @MethodSource("provideEatPositiveLion")
-    void DoesHaveManeTest(String sex, boolean expected) throws Exception {
+    void doesHaveManeTest(String sex, boolean expected) throws Exception {
         Lion lion = new Lion(sex, feline);
         boolean actual = lion.doesHaveMane();
         assertEquals(expected, actual);
     }
     @ParameterizedTest
     @MethodSource("provideEatPositiveLion")
-    void GetFoodTest(String sex) throws Exception {
+    void getFoodTest(String sex) throws Exception {
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         Lion lion = new Lion(sex, feline);
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
